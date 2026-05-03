@@ -74,6 +74,18 @@
           <p>Pipelines CI/CD, orchestration Kubernetes, Infrastructure as Code, déploiement continu.</p>
           <span class="card-link">Voir les projets →</span>
         </button>
+        <button class="about-card glass fade-in" data-filter="Data & BI">
+          <div class="card-icon">📊</div>
+          <h3>Data & BI</h3>
+          <p>ETL, data engineering, dashboards Power BI, traitement de données massives et reporting KPIs.</p>
+          <span class="card-link">Voir les projets →</span>
+        </button>
+        <button class="about-card glass fade-in" data-filter="Recherche & IA">
+          <div class="card-icon">🧠</div>
+          <h3>Recherche & IA</h3>
+          <p>Clustering, NLP, deep learning et théorie des jeux — travaux de recherche en laboratoire à l'INSA Lyon.</p>
+          <span class="card-link">Voir les projets →</span>
+        </button>
       </div>
     </div>
   </section>
@@ -90,6 +102,8 @@
         <button class="filter-btn" data-filter="Observabilité">Observabilité</button>
         <button class="filter-btn" data-filter="Automatisation Réseau">NetDevOps</button>
         <button class="filter-btn" data-filter="CI/CD & Infra">CI/CD & Infra</button>
+        <button class="filter-btn" data-filter="Data & BI">Data & BI</button>
+        <button class="filter-btn" data-filter="Recherche & IA">Recherche & IA</button>
         <button class="filter-btn" data-filter="Sécurité">Sécurité</button>
         <button class="filter-btn" data-filter="Stage">Stages</button>
       </div>
@@ -167,13 +181,36 @@
           </div>
         </div>
         <div class="skill-group fade-in">
-          <h4>IoT & Données</h4>
+          <h4>Data Science & IA</h4>
+          <div class="tags">
+            <span class="tag clickable-tag" data-filter="Recherche & IA">Scikit-learn</span>
+            <span class="tag clickable-tag" data-filter="Recherche & IA">TensorFlow</span>
+            <span class="tag clickable-tag" data-filter="Recherche & IA">k-means</span>
+            <span class="tag clickable-tag" data-filter="Recherche & IA">NLP</span>
+            <span class="tag clickable-tag" data-filter="Recherche & IA">Deep Learning</span>
+            <span class="tag">NumPy</span>
+            <span class="tag">Matplotlib</span>
+          </div>
+        </div>
+        <div class="skill-group fade-in">
+          <h4>Data Engineering & BI</h4>
+          <div class="tags">
+            <span class="tag clickable-tag" data-filter="Data & BI">Power BI</span>
+            <span class="tag clickable-tag" data-filter="Data & BI">Pandas</span>
+            <span class="tag clickable-tag" data-filter="Data & BI">ETL</span>
+            <span class="tag clickable-tag" data-filter="Data & BI">BigQuery</span>
+            <span class="tag clickable-tag" data-filter="Data & BI">Apache Airflow</span>
+            <span class="tag">PostgreSQL</span>
+            <span class="tag">Elasticsearch</span>
+          </div>
+        </div>
+        <div class="skill-group fade-in">
+          <h4>IoT & Terrain</h4>
           <div class="tags">
             <span class="tag">MQTT</span>
             <span class="tag">ADS-B</span>
             <span class="tag">InfluxDB</span>
-            <span class="tag">Pandas</span>
-            <span class="tag">PostgreSQL</span>
+            <span class="tag">Raspberry Pi</span>
           </div>
         </div>
       </div>
@@ -200,6 +237,7 @@
             <h3>CKA — Certified Kubernetes Administrator</h3>
             <p class="edu-school">CNCF / Linux Foundation</p>
             <p class="edu-detail">Certification officielle Kubernetes — administration de clusters en production</p>
+            <a href="https://ti-user-certificates.s3.amazonaws.com/e0df7fbf-a057-42af-8a1f-590912be5460/59e9968f-827a-49ef-996b-64ab6b08cffd-elhadji-niang-c510ead6-9cb6-4983-9094-e0f808703eaf-certificate.pdf" target="_blank" class="cert-link">Voir le certificat →</a>
           </div>
         </div>
       </div>
@@ -335,7 +373,7 @@ const experiences = [
     role: "Stage Ingénieur R&D",
     period: "2022",
     duration: "6 mois",
-    categories: ["CI/CD & Infra", "Stage"],
+    categories: ["Data & BI", "Stage"],
     icon: "🔬",
     color: "#06b6d4",
     summary: "Outil de génération automatique de rapports DTV réseau et workflow de staging LAN Automation sur DNA Center.",
@@ -352,16 +390,103 @@ const experiences = [
     role: "Stage Developer DevOps",
     period: "2021",
     duration: "4 mois",
-    categories: ["CI/CD & Infra", "Stage"],
+    categories: ["CI/CD & Infra", "Data & BI", "Stage"],
     icon: "🛠️",
     color: "#f43f5e",
-    summary: "Automatisation du cycle de vie des branches et gestion de la criticité des bugs sur Azure DevOps.",
+    summary: "Automatisation du cycle de vie des branches, gestion de la criticité des bugs et data processing sur Azure DevOps.",
     bullets: [
       "Implémentation d'un process de définition des niveaux de criticité des bugs et alerting sur Azure DevOps",
       "Développement d'un plugin Azure DevOps pour gérer le séquençage des pull requests",
-      "Mise en place de process d'automatisation du nettoyage des branches inactives",
+      "Réalisation d'un script de génération de rapports d'activités mensuels des prestataires externes",
+      "Implémentation d'un process de data processing pour l'analyse de bogues",
     ],
     stack: ["Azure DevOps", "Python", "REST API", "Azure Functions", "C#", "Git"],
+  },
+  {
+    id: 8,
+    company: "CNS Communications",
+    role: "Consultant Data",
+    period: "2023",
+    duration: "Mission",
+    categories: ["Data & BI"],
+    icon: "📈",
+    color: "#22c55e",
+    summary: "Solution de Business Intelligence pour le pilotage de l'activité — extraction depuis l'ERP et dashboards Power BI pour la direction.",
+    bullets: [
+      "Conception et implémentation d'une solution BI pour le pilotage de l'activité de l'entreprise",
+      "Extraction et transformation de données depuis l'ERP via API REST pour automatiser la collecte des données métier",
+      "Création de dashboards interactifs Power BI pour la visualisation des KPIs mensuels à destination de la direction",
+    ],
+    stack: ["Python", "Pandas", "Power BI", "Excel", "REST API", "ETL"],
+  },
+  {
+    id: 9,
+    company: "L'Oréal",
+    role: "Consultant Data",
+    period: "Avril 2023 — Décembre 2024",
+    duration: "20 mois",
+    categories: ["Data & BI"],
+    icon: "📡",
+    color: "#a855f7",
+    summary: "Vérification de conformité Wi-Fi sur 6000+ équipements et reporting automatisé de 300+ paramètres par équipement.",
+    bullets: [
+      "Vérification de la convergence des configurations Wi-Fi sur 6000+ équipements réseau",
+      "Traitement automatisé de plus de 300 paramètres par équipement (multithreading Python)",
+      "Génération de rapports Excel et tableaux de bord Power BI pour visualiser la conformité",
+    ],
+    stack: ["Python", "Pandas", "NumPy", "Multithreading", "Netmiko", "REST API", "Power BI", "Cisco", "Meraki"],
+  },
+  {
+    id: 10,
+    company: "Laboratoire CITI — INSA Lyon",
+    role: "Étudiant Chercheur",
+    period: "2022",
+    duration: "6 mois",
+    categories: ["Recherche & IA"],
+    icon: "₿",
+    color: "#f59e0b",
+    summary: "Analyse du cycle de vie de 8000+ cryptomonnaies par clustering k-means et recherche de corrélations.",
+    bullets: [
+      "Analyse du cycle de vie de 8000+ cryptomonnaies avec k-means",
+      "Implémentation d'une méthode de clusterisation et recherche de corrélations entre actifs",
+      "État de l'art des méthodes de classification et traitement NLP",
+    ],
+    stack: ["Python", "k-means", "ELK", "Web Scraping", "NLP", "Pandas", "Scikit-learn", "Matplotlib", "Seaborn"],
+  },
+  {
+    id: 11,
+    company: "Laboratoire CITI — INSA Lyon",
+    role: "Étudiant Chercheur",
+    period: "2022",
+    duration: "6 mois",
+    categories: ["Recherche & IA"],
+    icon: "🎲",
+    color: "#f59e0b",
+    summary: "Recherche sur les processus décisionnels de Markov et les méthodes heuristiques en théorie des jeux.",
+    bullets: [
+      "Travaux de recherche sur la continuité des Best-Response Dynamics en théorie des jeux",
+      "État de l'art sur les processus décisionnels de Markov (MDP)",
+      "Études algorithmiques sur les méthodes heuristiques appliquées aux MDP",
+    ],
+    stack: ["C++", "LaTeX", "Algorithmique", "Théorie des jeux"],
+  },
+  {
+    id: 12,
+    company: "Laboratoire LIRIS — INSA Lyon",
+    role: "Étudiant Chercheur",
+    period: "2021",
+    duration: "6 mois",
+    categories: ["Recherche & IA"],
+    icon: "👁️",
+    color: "#06b6d4",
+    summary: "Recherche sur la reconnaissance faciale par réseaux de neurones convolutionnels — entraînement et transfer learning avec AlexNet.",
+    bullets: [
+      "Recherche sur la reconnaissance faciale par réseaux de neurones convolutionnels (CNN)",
+      "Entraînement et transfer learning avec AlexNet",
+      "Développement d'une interface de reconnaissance faciale sur MATLAB",
+      "État de l'art sur les architectures CNN",
+    ],
+    stack: ["MATLAB", "Python", "Deep Learning", "AlexNet", "Transfer Learning", "LaTeX"],
   },
 ];
 
@@ -486,7 +611,7 @@ document.querySelectorAll(".clickable-tag[data-filter]").forEach(tag => {
 renderCards();
 
 // ── Typing animation ──────────────────────────────────────────────
-const roles = ["Consultant DevOps", "NetDevOps Engineer", "Observability Expert", "Network Automator"];
+const roles = ["Consultant DevOps", "NetDevOps Engineer", "ConsultantObservability", "Network Automator"];
 let ri = 0, ci = 0, deleting = false;
 const el = document.getElementById("typed");
 function type() {
