@@ -1,35 +1,520 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Portfolio - Elhadji</title>
+  <title>Elhadji NIANG — Portfolio</title>
   <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <header>
-    <img src="assets/photo.jpg" alt="Ma photo" class="profile-pic" />
-    <h1>Elhadji NIANG</h1>
-    <p>Consulting Engineer in Observability, Data, and DevOps</p>
-  </header>
 
-  <section id="about">
-    <h2>About me</h2>
-    <p>Consulting engineer at CNS Communications, i am a former computer scientist with a strong AI research background, I now work on observability within IT systems, focusing on better data utilization to gain deeper insights and improve system understanding.
-Furthermore, i have a strong interest in sensors and IoT data, particularly those related to aircraft, and I explore these topics in my homemade lab.</p>
-      
-  </p>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="nav-logo">EN</div>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#experience">Expériences</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#education">Formation</a></li>
+      <li><a href="#cv" class="nav-cta">CV</a></li>
+    </ul>
+    <button class="nav-burger" aria-label="menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-bg">
+      <div class="orb orb-1"></div>
+      <div class="orb orb-2"></div>
+      <div class="orb orb-3"></div>
+    </div>
+    <div class="hero-content">
+      <div class="hero-badge">Disponible pour de nouvelles missions</div>
+      <img src="assets/photo.jpg" alt="Elhadji NIANG" class="profile-pic" />
+      <h1>Elhadji <span class="highlight">NIANG</span></h1>
+      <p class="hero-subtitle"><span id="typed"></span></p>
+      <p class="hero-company">Ingénieur diplômé <strong>INSA Lyon</strong> · CKA Certified</p>
+      <div class="hero-actions">
+        <a href="#experience" class="btn btn-primary">Voir mes projets</a>
+        <a href="https://github.com/elhadjim" target="_blank" class="btn btn-ghost">
+          <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.44 9.8 8.21 11.39.6.11.82-.26.82-.58v-2.03c-3.34.73-4.04-1.61-4.04-1.61-.54-1.38-1.33-1.74-1.33-1.74-1.09-.75.08-.73.08-.73 1.2.08 1.84 1.23 1.84 1.23 1.07 1.83 2.8 1.3 3.49 1 .11-.78.42-1.3.76-1.6-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.12-.3-.54-1.52.12-3.17 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 013-.4c1.02.005 2.04.14 3 .4 2.29-1.55 3.3-1.23 3.3-1.23.66 1.65.24 2.87.12 3.17.77.84 1.24 1.91 1.24 3.22 0 4.61-2.81 5.63-5.48 5.92.43.37.81 1.1.81 2.22v3.29c0 .32.21.7.82.58C20.56 21.8 24 17.3 24 12c0-6.63-5.37-12-12-12z"/></svg>
+          GitHub
+        </a>
+      </div>
+    </div>
+    <div class="scroll-hint"><span></span></div>
   </section>
 
-  <section id="cv">
-    <h2>My CV</h2>
-    <a href="assets/cv_elhadji_niang.pdf" target="_blank">Download my CV</a>
+  <!-- About -->
+  <section id="about" class="section">
+    <div class="container">
+      <div class="section-label">01 — Profil</div>
+      <h2 class="section-title">Ce que je fais</h2>
+      <p class="section-intro">Consultant en automatisation réseau, DevOps et observabilité. J'interviens sur des infrastructures complexes en mode IaC, et j'ai un intérêt fort pour les données IoT et l'aviation.</p>
+      <div class="about-grid">
+        <button class="about-card glass fade-in" data-filter="Observabilité">
+          <div class="card-icon">📡</div>
+          <h3>Observabilité</h3>
+          <p>Déploiement de plateformes d'observabilité, pipelines de données, dashboards Grafana et alerting.</p>
+          <span class="card-link">Voir les projets →</span>
+        </button>
+        <button class="about-card glass fade-in" data-filter="Automatisation Réseau">
+          <div class="card-icon">🔧</div>
+          <h3>Automatisation Réseau</h3>
+          <p>Automatisation de workflows réseau, gestion de configuration, IaC avec Ansible et Netbox.</p>
+          <span class="card-link">Voir les projets →</span>
+        </button>
+        <button class="about-card glass fade-in" data-filter="CI/CD & Infra">
+          <div class="card-icon">⚙️</div>
+          <h3>CI/CD & Infra</h3>
+          <p>Pipelines CI/CD, orchestration Kubernetes, Infrastructure as Code, déploiement continu.</p>
+          <span class="card-link">Voir les projets →</span>
+        </button>
+      </div>
+    </div>
   </section>
 
-  <footer>
-    <p>© 2025 Elhadji NIANG</p>
-    <a href="https://github.com/elhadjim" target="_blank">GitHub</a> |
-    <a href="https://www.linkedin.com/in/elhadji-niang-ba805b176/" target="_blank">LinkedIn</a>
+  <!-- Experience -->
+  <section id="experience" class="section section-alt">
+    <div class="container">
+      <div class="section-label">02 — Expériences</div>
+      <h2 class="section-title">Projets & Missions</h2>
+
+      <!-- Filters -->
+      <div class="filter-bar">
+        <button class="filter-btn active" data-filter="all">Tout</button>
+        <button class="filter-btn" data-filter="Observabilité">Observabilité</button>
+        <button class="filter-btn" data-filter="Automatisation Réseau">NetDevOps</button>
+        <button class="filter-btn" data-filter="CI/CD & Infra">CI/CD & Infra</button>
+        <button class="filter-btn" data-filter="Sécurité">Sécurité</button>
+        <button class="filter-btn" data-filter="Stage">Stages</button>
+      </div>
+
+      <!-- Experience cards -->
+      <div class="exp-grid" id="exp-grid"></div>
+    </div>
+  </section>
+
+  <!-- Modal -->
+  <div class="modal-overlay" id="modal-overlay">
+    <div class="modal glass" id="modal">
+      <button class="modal-close" id="modal-close">✕</button>
+      <div id="modal-content"></div>
+    </div>
+  </div>
+
+  <!-- Skills -->
+  <section id="skills" class="section">
+    <div class="container">
+      <div class="section-label">03 — Compétences</div>
+      <h2 class="section-title">Stack technique</h2>
+      <div class="skills-wrapper">
+        <div class="skill-group fade-in">
+          <h4>Observabilité</h4>
+          <div class="tags">
+            <span class="tag clickable-tag" data-filter="Observabilité">OpenTelemetry</span>
+            <span class="tag clickable-tag" data-filter="Observabilité">ELK Stack</span>
+            <span class="tag clickable-tag" data-filter="Observabilité">Grafana</span>
+            <span class="tag clickable-tag" data-filter="Observabilité">Prometheus</span>
+            <span class="tag clickable-tag" data-filter="Observabilité">Dynatrace</span>
+            <span class="tag clickable-tag" data-filter="Observabilité">Zabbix</span>
+          </div>
+        </div>
+        <div class="skill-group fade-in">
+          <h4>DevOps / IaC</h4>
+          <div class="tags">
+            <span class="tag clickable-tag" data-filter="CI/CD & Infra">Ansible</span>
+            <span class="tag clickable-tag" data-filter="CI/CD & Infra">Kubernetes</span>
+            <span class="tag clickable-tag" data-filter="CI/CD & Infra">Helm</span>
+            <span class="tag clickable-tag" data-filter="CI/CD & Infra">ArgoCD</span>
+            <span class="tag clickable-tag" data-filter="CI/CD & Infra">Docker</span>
+            <span class="tag clickable-tag" data-filter="CI/CD & Infra">Terraform</span>
+          </div>
+        </div>
+        <div class="skill-group fade-in">
+          <h4>CI/CD</h4>
+          <div class="tags">
+            <span class="tag clickable-tag" data-filter="CI/CD & Infra">GitLab CI/CD</span>
+            <span class="tag clickable-tag" data-filter="CI/CD & Infra">Jenkins</span>
+            <span class="tag clickable-tag" data-filter="CI/CD & Infra">Azure DevOps</span>
+            <span class="tag clickable-tag" data-filter="CI/CD & Infra">GitHub Actions</span>
+          </div>
+        </div>
+        <div class="skill-group fade-in">
+          <h4>Automatisation Réseau</h4>
+          <div class="tags">
+            <span class="tag clickable-tag" data-filter="Automatisation Réseau">AWX</span>
+            <span class="tag clickable-tag" data-filter="Automatisation Réseau">Netbox</span>
+            <span class="tag clickable-tag" data-filter="Automatisation Réseau">Semaphore</span>
+            <span class="tag clickable-tag" data-filter="Automatisation Réseau">Rundeck</span>
+            <span class="tag clickable-tag" data-filter="Automatisation Réseau">Cisco</span>
+            <span class="tag clickable-tag" data-filter="Automatisation Réseau">FortiManager</span>
+            <span class="tag clickable-tag" data-filter="Automatisation Réseau">Meraki</span>
+          </div>
+        </div>
+        <div class="skill-group fade-in">
+          <h4>Langages</h4>
+          <div class="tags">
+            <span class="tag">Python</span>
+            <span class="tag">Go</span>
+            <span class="tag">Bash</span>
+            <span class="tag">SQL</span>
+            <span class="tag">C#</span>
+          </div>
+        </div>
+        <div class="skill-group fade-in">
+          <h4>IoT & Données</h4>
+          <div class="tags">
+            <span class="tag">MQTT</span>
+            <span class="tag">ADS-B</span>
+            <span class="tag">InfluxDB</span>
+            <span class="tag">Pandas</span>
+            <span class="tag">PostgreSQL</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Education -->
+  <section id="education" class="section section-alt">
+    <div class="container">
+      <div class="section-label">04 — Formation & Certifications</div>
+      <h2 class="section-title">Parcours académique</h2>
+      <div class="edu-grid">
+        <div class="edu-card glass fade-in">
+          <div class="edu-icon">🎓</div>
+          <div>
+            <h3>Diplôme d'Ingénieur</h3>
+            <p class="edu-school">INSA Lyon</p>
+            <p class="edu-detail">Spécialité Télécommunications · Parcours recherche en sciences des données</p>
+          </div>
+        </div>
+        <div class="edu-card glass fade-in">
+          <div class="edu-icon">☸️</div>
+          <div>
+            <h3>CKA — Certified Kubernetes Administrator</h3>
+            <p class="edu-school">CNCF / Linux Foundation</p>
+            <p class="edu-detail">Certification officielle Kubernetes — administration de clusters en production</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CV -->
+  <section id="cv" class="section">
+    <div class="container cv-section">
+      <div class="section-label">05 — Curriculum Vitae</div>
+      <h2 class="section-title">Mon CV complet</h2>
+      <p class="cv-desc">Toutes mes expériences, formations et compétences au même endroit.</p>
+      <a href="assets/cv_elhadji_niang.pdf" target="_blank" class="btn btn-primary btn-large">
+        <svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M4 16v1a2 2 0 002 2h12a2 2 0 002-2v-1M8 12l4 4m0 0l4-4m-4 4V4"/></svg>
+        Télécharger le CV
+      </a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <p class="footer-copy">© 2025 Elhadji NIANG · Lyon, France</p>
+      <div class="footer-links">
+        <a href="https://github.com/elhadjim" target="_blank" class="social-link">
+          <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.44 9.8 8.21 11.39.6.11.82-.26.82-.58v-2.03c-3.34.73-4.04-1.61-4.04-1.61-.54-1.38-1.33-1.74-1.33-1.74-1.09-.75.08-.73.08-.73 1.2.08 1.84 1.23 1.84 1.23 1.07 1.83 2.8 1.3 3.49 1 .11-.78.42-1.3.76-1.6-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.12-.3-.54-1.52.12-3.17 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 013-.4c1.02.005 2.04.14 3 .4 2.29-1.55 3.3-1.23 3.3-1.23.66 1.65.24 2.87.12 3.17.77.84 1.24 1.91 1.24 3.22 0 4.61-2.81 5.63-5.48 5.92.43.37.81 1.1.81 2.22v3.29c0 .32.21.7.82.58C20.56 21.8 24 17.3 24 12c0-6.63-5.37-12-12-12z"/></svg>
+          GitHub
+        </a>
+        <a href="https://www.linkedin.com/in/elhadji-niang-ba805b176/" target="_blank" class="social-link">
+          <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.44-2.14 2.94v5.67H9.34V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.07 2.07 0 110-4.14 2.07 2.07 0 010 4.14zM3.56 20.45h3.56V9H3.56v11.45zM22.22 0H1.78C.8 0 0 .78 0 1.74v20.52C0 23.22.8 24 1.78 24h20.44C23.2 24 24 23.22 24 22.26V1.74C24 .78 23.2 0 22.22 0z"/></svg>
+          LinkedIn
+        </a>
+        <a href="mailto:melhadjien@gmail.com" class="social-link">
+          <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+          Email
+        </a>
+      </div>
+    </div>
   </footer>
+
+<script>
+// ── Data ──────────────────────────────────────────────────────────
+const experiences = [
+  {
+    id: 1,
+    company: "CMA-CGM",
+    role: "Consultant NetDevOps",
+    period: "Mars 2025 — Présent",
+    duration: "En cours",
+    categories: ["Automatisation Réseau", "CI/CD & Infra"],
+    icon: "🚢",
+    color: "#00d4ff",
+    summary: "Automatisation des workflows de migration et configuration réseau pour le géant du transport maritime.",
+    bullets: [
+      "Automatisation des workflows de migration et de configuration réseau avec Semaphore et Ansible",
+      "Développement de scripts Python pour la gestion et l'automatisation des configurations réseau",
+      "Mise en place d'un environnement GitLab et pipelines CI/CD pour la qualité du code",
+    ],
+    stack: ["Python", "Ansible", "Git", "GitLab CI/CD", "REST API", "Semaphore", "Netbox"],
+  },
+  {
+    id: 2,
+    company: "L'Oréal",
+    role: "Consultant Automatisation",
+    period: "2023 — 2024",
+    duration: "11 mois",
+    categories: ["Automatisation Réseau"],
+    icon: "💄",
+    color: "#a855f7",
+    summary: "Conformité des données réseau, reporting de connectivité et sauvegarde automatisée des configurations sur GitHub.",
+    bullets: [
+      "Réalisation d'un process de vérification de conformité des données réseau",
+      "Mise en place d'un process de génération de rapports de connectivité",
+      "Design et implémentation d'un process de sauvegarde journalière des configurations équipements sur GitHub",
+    ],
+    stack: ["Netbox", "AWX", "Python", "Ansible", "Meraki", "Cisco", "GitHub"],
+  },
+  {
+    id: 3,
+    company: "L'Oréal",
+    role: "Consultant Automatisation",
+    period: "2023",
+    duration: "5 mois",
+    categories: ["Automatisation Réseau", "Sécurité"],
+    icon: "🔍",
+    color: "#a855f7",
+    summary: "Automatisation de la recherche de règles de sécurité sur FortiManager et gestion des objets complexes.",
+    bullets: [
+      "Réalisation d'un processus de recherche de règles sur les FortiManager",
+      "Récupération et traitement des objets complexes depuis le FortiManager via API",
+      "Mise en place de Job Templates depuis AWX pour l'orchestration",
+    ],
+    stack: ["Python", "Ansible", "AWX", "GitHub", "FortiManager"],
+  },
+  {
+    id: 4,
+    company: "CNS Communications",
+    role: "Consultant Observabilité / DevOps",
+    period: "2023",
+    duration: "5 mois",
+    categories: ["Observabilité", "CI/CD & Infra"],
+    icon: "📊",
+    color: "#22c55e",
+    summary: "Déploiement d'une plateforme d'observabilité complète sur Kubernetes avec pipeline de données et dashboards.",
+    bullets: [
+      "Déploiement d'une plateforme d'observabilité sur Kubernetes avec Helm",
+      "Mise en place d'un pipeline de données avec ELK, Prometheus et Grafana",
+      "Création de dashboards Grafana pour la visualisation des métriques et logs",
+      "Instrumentation via OpenTelemetry et supervision Zabbix",
+    ],
+    stack: ["Kubernetes", "Helm", "OpenTelemetry", "ELK", "Zabbix", "Prometheus", "Grafana", "Python"],
+  },
+  {
+    id: 5,
+    company: "VICAT",
+    role: "Consultant Automatisation",
+    period: "2022 — 2023",
+    duration: "5 mois",
+    categories: ["Automatisation Réseau", "Sécurité"],
+    icon: "🏭",
+    color: "#f59e0b",
+    summary: "Conception et implémentation d'un système KillSwitch permettant d'isoler en un clic un pays ou site industriel compromis.",
+    bullets: [
+      "Réalisation du processus KillSwitch : isolation en un clic d'un pays ou site industriel du réseau global en cas de compromission",
+      "Étude, design et implémentation du processus global de sécurisation",
+      "Mise en place d'un process automatisé de rollback post-isolation",
+    ],
+    stack: ["Netbox", "Rundeck", "Ansible", "Cisco", "Git"],
+  },
+  {
+    id: 6,
+    company: "OCWs",
+    role: "Stage Ingénieur R&D",
+    period: "2022",
+    duration: "6 mois",
+    categories: ["CI/CD & Infra", "Stage"],
+    icon: "🔬",
+    color: "#06b6d4",
+    summary: "Outil de génération automatique de rapports DTV réseau et workflow de staging LAN Automation sur DNA Center.",
+    bullets: [
+      "Réalisation d'un outil de génération automatique de rapports DTV réseau (Pandas + PostgreSQL)",
+      "Étude et exploration de l'API Cisco DNA Center",
+      "Design et implémentation d'un workflow de staging automatique des équipements via LAN Automation",
+    ],
+    stack: ["Pandas", "PostgreSQL", "Netmiko", "Flask", "Angular", "REST API"],
+  },
+  {
+    id: 7,
+    company: "TIAMA Inspection Worldwide",
+    role: "Stage Developer DevOps",
+    period: "2021",
+    duration: "4 mois",
+    categories: ["CI/CD & Infra", "Stage"],
+    icon: "🛠️",
+    color: "#f43f5e",
+    summary: "Automatisation du cycle de vie des branches et gestion de la criticité des bugs sur Azure DevOps.",
+    bullets: [
+      "Implémentation d'un process de définition des niveaux de criticité des bugs et alerting sur Azure DevOps",
+      "Développement d'un plugin Azure DevOps pour gérer le séquençage des pull requests",
+      "Mise en place de process d'automatisation du nettoyage des branches inactives",
+    ],
+    stack: ["Azure DevOps", "Python", "REST API", "Azure Functions", "C#", "Git"],
+  },
+];
+
+// ── Render cards ──────────────────────────────────────────────────
+function renderCards(filter = "all") {
+  const grid = document.getElementById("exp-grid");
+  const filtered = filter === "all"
+    ? experiences
+    : experiences.filter(e => e.categories.includes(filter));
+
+  grid.innerHTML = "";
+
+  if (filtered.length === 0) {
+    grid.innerHTML = `<p class="no-results">Aucun projet dans cette catégorie.</p>`;
+    return;
+  }
+
+  filtered.forEach((exp, i) => {
+    const card = document.createElement("article");
+    card.className = "exp-card glass";
+    card.style.animationDelay = `${i * 0.08}s`;
+    card.innerHTML = `
+      <div class="exp-card-header" style="--accent-color:${exp.color}">
+        <span class="exp-icon">${exp.icon}</span>
+        <div class="exp-meta">
+          <span class="exp-duration">${exp.duration}</span>
+          <div class="exp-cats">
+            ${exp.categories.map(c => `<span class="cat-badge">${c}</span>`).join("")}
+          </div>
+        </div>
+      </div>
+      <h3 class="exp-company">${exp.company}</h3>
+      <p class="exp-role">${exp.role} · <span>${exp.period}</span></p>
+      <p class="exp-summary">${exp.summary}</p>
+      <div class="exp-stack">
+        ${exp.stack.slice(0, 4).map(t => `<span class="tag-sm">${t}</span>`).join("")}
+        ${exp.stack.length > 4 ? `<span class="tag-sm tag-more">+${exp.stack.length - 4}</span>` : ""}
+      </div>
+      <button class="exp-more-btn" data-id="${exp.id}">Voir le détail →</button>
+    `;
+    grid.appendChild(card);
+  });
+
+  // attach button listeners
+  grid.querySelectorAll(".exp-more-btn").forEach(btn => {
+    btn.addEventListener("click", () => openModal(parseInt(btn.dataset.id)));
+  });
+}
+
+// ── Modal ─────────────────────────────────────────────────────────
+function openModal(id) {
+  const exp = experiences.find(e => e.id === id);
+  if (!exp) return;
+  document.getElementById("modal-content").innerHTML = `
+    <div class="modal-header" style="--accent-color:${exp.color}">
+      <span class="modal-icon">${exp.icon}</span>
+      <div>
+        <h2>${exp.company}</h2>
+        <p class="modal-role">${exp.role} · ${exp.period}</p>
+      </div>
+    </div>
+    <div class="modal-cats">
+      ${exp.categories.map(c => `<span class="cat-badge">${c}</span>`).join("")}
+    </div>
+    <ul class="modal-bullets">
+      ${exp.bullets.map(b => `<li>${b}</li>`).join("")}
+    </ul>
+    <div class="modal-stack-title">Stack technique</div>
+    <div class="modal-stack">
+      ${exp.stack.map(t => `<span class="tag">${t}</span>`).join("")}
+    </div>
+  `;
+  document.getElementById("modal-overlay").classList.add("open");
+  document.body.style.overflow = "hidden";
+}
+
+function closeModal() {
+  document.getElementById("modal-overlay").classList.remove("open");
+  document.body.style.overflow = "";
+}
+
+document.getElementById("modal-close").addEventListener("click", closeModal);
+document.getElementById("modal-overlay").addEventListener("click", e => {
+  if (e.target === e.currentTarget) closeModal();
+});
+document.addEventListener("keydown", e => { if (e.key === "Escape") closeModal(); });
+
+// ── Filters ───────────────────────────────────────────────────────
+let activeFilter = "all";
+
+function setFilter(filter) {
+  activeFilter = filter;
+  document.querySelectorAll(".filter-btn").forEach(btn => {
+    btn.classList.toggle("active", btn.dataset.filter === filter);
+  });
+  renderCards(filter);
+}
+
+document.querySelectorAll(".filter-btn").forEach(btn => {
+  btn.addEventListener("click", () => setFilter(btn.dataset.filter));
+});
+
+// About cards → filter + scroll
+document.querySelectorAll(".about-card[data-filter]").forEach(card => {
+  card.addEventListener("click", () => {
+    const filter = card.dataset.filter;
+    setFilter(filter);
+    document.getElementById("experience").scrollIntoView({ behavior: "smooth" });
+  });
+});
+
+// Skill tags → filter + scroll
+document.querySelectorAll(".clickable-tag[data-filter]").forEach(tag => {
+  tag.addEventListener("click", () => {
+    const filter = tag.dataset.filter;
+    setFilter(filter);
+    document.getElementById("experience").scrollIntoView({ behavior: "smooth" });
+  });
+});
+
+// ── Initial render ────────────────────────────────────────────────
+renderCards();
+
+// ── Typing animation ──────────────────────────────────────────────
+const roles = ["Consultant DevOps", "NetDevOps Engineer", "Observability Expert", "Network Automator"];
+let ri = 0, ci = 0, deleting = false;
+const el = document.getElementById("typed");
+function type() {
+  const cur = roles[ri];
+  el.textContent = deleting ? cur.substring(0, ci--) : cur.substring(0, ci++);
+  let d = deleting ? 45 : 75;
+  if (!deleting && ci === cur.length + 1) { d = 1800; deleting = true; }
+  else if (deleting && ci === -1) { deleting = false; ci = 0; ri = (ri + 1) % roles.length; d = 300; }
+  setTimeout(type, d);
+}
+type();
+
+// ── Navbar scroll ─────────────────────────────────────────────────
+window.addEventListener("scroll", () => {
+  document.querySelector(".navbar").classList.toggle("scrolled", window.scrollY > 60);
+});
+
+// ── Burger menu ───────────────────────────────────────────────────
+document.querySelector(".nav-burger").addEventListener("click", () => {
+  document.querySelector(".nav-links").classList.toggle("open");
+});
+
+// ── Intersection observer ─────────────────────────────────────────
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(e => { if (e.isIntersecting) e.target.classList.add("visible"); });
+}, { threshold: 0.08 });
+
+document.querySelectorAll(".about-card, .skill-group, .edu-card").forEach(el => observer.observe(el));
+</script>
 </body>
 </html>
